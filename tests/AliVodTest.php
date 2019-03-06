@@ -21,8 +21,6 @@ class AliVodTest extends TestCase
     public function setUp()
     {
 
-//        $file =  dirname(__DIR__) .'/config/translate.php';
-//        $config = include($file);
 
         try {
             $config = ['AccessKeyID' => '******账号不给你看***', 'AccessKeySecret' => '*****密码给你看******'];

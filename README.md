@@ -1,7 +1,7 @@
 # Aliyun Vod for PHP
 
 ---
-[![](https://travis-ci.org/ShaoZeMing/translate.svg?branch=master)](https://travis-ci.org/ShaoZeMing/translate) 
+[![](https://travis-ci.org/ShaoZeMing/Aliyun-Vod.svg?branch=master)](https://travis-ci.org/ShaoZeMing/translate) 
 [![](https://img.shields.io/packagist/v/ShaoZeMing/translate.svg)](https://packagist.org/packages/shaozeming/translate) 
 [![](https://img.shields.io/packagist/dt/ShaoZeMing/translate.svg)](https://packagist.org/packages/stichoza/shaozeming/translate)
 
