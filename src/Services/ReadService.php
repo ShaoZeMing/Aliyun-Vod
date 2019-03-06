@@ -18,14 +18,15 @@ class ReadService extends BaseService
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
      * @param $videoId
+     * @param float|int $timeout
      * @return mixed|\SimpleXMLElement
      * @throws \ClientException
      * @throws \ServerException
      */
-    function getPlayInfo($videoId) {
+    function getPlayInfo($videoId,$timeout=3600*24) {
         $request = new GetPlayInfoRequest();
         $request->setVideoId($videoId);
-        $request->setAuthTimeout(3600*24);
+        $request->setAuthTimeout($timeout);
         $request->setAcceptFormat('JSON');
         $playInfo = $this->client->getAcsResponse($request);
         return $playInfo;
@@ -37,14 +38,15 @@ class ReadService extends BaseService
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
      * @param $videoId
+     * @param float|int $timeout
      * @return mixed|\SimpleXMLElement
      * @throws \ClientException
      * @throws \ServerException
      */
-    function getPlayAuth($videoId) {
+    function getPlayAuth($videoId,$timeout=3600) {
         $request = new GetVideoPlayAuthRequest();
         $request->setVideoId($videoId);
-        $request->setAuthInfoTimeout(3600);
+        $request->setAuthInfoTimeout($timeout);
         $request->setAcceptFormat('JSON');
         $playAuth  = $this->client->getAcsResponse($request);
 

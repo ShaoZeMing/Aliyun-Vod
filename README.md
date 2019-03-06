@@ -5,6 +5,7 @@
 [![](https://img.shields.io/packagist/v/ShaoZeMing/translate.svg)](https://packagist.org/packages/shaozeming/translate) 
 [![](https://img.shields.io/packagist/dt/ShaoZeMing/translate.svg)](https://packagist.org/packages/stichoza/shaozeming/translate)
 
+> 因为项目驱动，目前只自定义了几个简单的方法，用于视频查询鉴权和视频上传系列接口，比较其他很多功能接口，我个人觉得直接去控制台更好管理。如果你执意要用，那我只能说你很棒棒哦，需要vod其他的api方法调用，可以参考官方SDK文档使用本包进行调用，本包包含官方所有接口文件，composer已自动载入官方SDK,可以参考。Service/下几个文件。
 
 ## Installing
 
@@ -12,87 +13,41 @@
 $ composer require shaozeming/aliyun-vod -v
 ```
 
-### configuration 
-
-```php
-// config/translate.php
-
-    //使用什么翻译驱动
-    // 目前支持这几种: "baidu", "youdao","google"
-    /*
-     *  默认使用google  google使用的是免费接口爬取，目前能用，为了确保稳定，请配置一个备用服务， 目前只有google和baidu 支持繁体翻译
-     */
-    'defaults' => [
-        'driver' => 'google',   //默认使用google翻译
-        'spare_driver' => 'baidu',  // 备用翻译api ,第一个翻译失败情况下，调用备用翻译服务，填写备用翻译api 需要在下面对应的drivers中配置你参数
-        'from' => 'zh',   //原文本语言类型 ，目前支持：auto【自动检测】,en【英语】,zh【中文】，jp【日语】,ko【韩语】，fr【法语】，ru【俄文】，pt【西班牙】
-        'to' => 'en',     //翻译文本 ：en【英语】,zh【中文】，jp【日语】,ko【韩语】，fr【法语】，ru【俄文】，pt【西班牙】,  
-    ],
-   
-       'drivers' => [
-           'baidu' => [
-               'base_url' => 'http://api.fanyi.baidu.com/api/trans/vip/translate',
-               //App id of the translation api
-               'app_id' => '20180611000174972',
-               //secret of the translation api
-               'app_key' => 'cEXha7w4elaXO23NJ2Tt',
-           ],
-   
-           'youdao' => [
-               'base_url' => 'https://openapi.youdao.com/api',
-               //App id of the translation api
-               'app_id' => '',
-               //secret of the translation api
-               'app_key' => '',
-           ],
-   
-           'google' => [
-               'base_url' => 'http://translate.google.cn/translate_a/single',
-               'app_id' => '',
-               'app_key' => '',
-           ],
-       ],
-
-
-```
-
-
-## Usage
+## Example
 
 
 ```php
-use ShaoZeMing\Translate\TranslateService;
-
-$config = include($youerpath.'/translate.php')
-
-$obj = new TranslateService($config);
-$result = $obj->translate('你知道我对你不仅仅是喜欢');
-print_r($result);
+use ShaoZeMing\AliVod\Services\ReadService;
+use ShaoZeMing\AliVod\Services\UploadService;
 
 
-
-```
-
-
-Example:
-
-```php
- // 动态更改翻译服务商
- $config = include($youerpath.'/translate.php')
- $obj = new TranslateService($config);
- $obj->setDriver('baidu')->translate('你知道我对你不仅仅是喜欢');
- print_r($result);
- //You know I'm not just like you
  
- // 动态更改语种
  
- $from = 'en';
- $to = 'zh';
- $result =  $obj->setDriver('baidu')->setFromAndTo($from,$to)->translate('I love you.');
-print_r($result);
+ $config = ['AccessKeyID' => '*****秘钥不给你看******', 'AccessKeySecret' => '*****秘钥不给你看******'];
+             $instance = new UploadService($config);
+             $read = new ReadService($config);
+
+
+            $title ='title';
+            $filename= 'filename.mp4';
+            $desc = "这是一个测试视频";
+            $coverUrl='http://www.pptbz.com/pptpic/UploadFiles_6909/201203/2012031220134655.jpg';
+            $tags=['标签1','标签2'];
+//            $result =  $instance->createUploadVideo($title,$filename,$desc,$coverUrl, $tags);  //获取视频上传地址和凭证
+//            $result =  $instance->refreshUploadVideo($videoId);  //刷新视频上传凭证
+//            $result = $instance->uploadMediaByURL($url,$title);  //url 拉去视屏上传
+            
+              $result =  $read->getPlayAuth('4db8b50cbee04154b9557a4812a27584'); // 获取播放权限参数
+//            $result =  $read->getPlayInfo('4db8b50cbee04154b9557a4812a27584'); // 获取播放信息
+            
+            print_r($result);
+            return $result;
+       
+
 
 
 ```
+
 
 ## License
 
