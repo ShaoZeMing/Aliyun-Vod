@@ -17,10 +17,10 @@
     ],
     "autoload": {
         "psr-4": {
-            "ShaoZeMing\\AliVod\\": "./src/Vod/"
+            "ShaoZeMing\\AliVod\\": "./src/"
         },
         "files": [
-            "./src/Core/Config.php"
+            "./core/Config.php"
         ]
     },
     "autoload-dev": {

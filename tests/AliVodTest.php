@@ -7,8 +7,9 @@
  */
 
 namespace ShaoZeMing\AliVod\Test;
+
 use PHPUnit\Framework\TestCase;
-use ShaoZeMing\AliVod\VodService;
+use ShaoZeMing\AliVod\Services\VodService;
 
 
 class AliVodTest extends TestCase
@@ -20,7 +21,14 @@ class AliVodTest extends TestCase
 
 //        $file =  dirname(__DIR__) .'/config/translate.php';
 //        $config = include($file);
-            $this->instance = new VodService();
+
+        try {
+            $config = ['AccessKeyID' => 'xxxxx', 'AccessKeySecret' => 'xxxxxx'];
+            $this->instance = new VodService($config);
+        } catch (\Exception $e) {
+            $err = "Error : 错误：" . $e->getMessage();
+            echo $err . PHP_EOL;
+        }
     }
 
 
@@ -32,17 +40,22 @@ class AliVodTest extends TestCase
 
     public function testPush()
     {
-        echo PHP_EOL."后去上传后的地址和token 中....".PHP_EOL;
+        echo PHP_EOL . "后去上传后的地址和token 中...." . PHP_EOL;
         try {
-//            $result =  $this->instance->createUploadVideo();
+            $title ='title';
+            $filename= 'filename.mp4';
+            $desc = "这是一个测试视频";
+            $coverUrl='http://www.pptbz.com/pptpic/UploadFiles_6909/201203/2012031220134655.jpg';
+            $tags=['标签1','标签2'];
+            $result =  $this->instance->createUploadVideo($title,$filename,$desc,$coverUrl, $tags);
 
-            $result =  $this->instance->uploadMediaByURL();
+//            $result = $this->instance->uploadMediaByURL();
 
             print_r($result);
             return $result;
         } catch (\Exception $e) {
             $err = "Error : 错误：" . $e->getMessage();
-            echo $err.PHP_EOL;
+            echo $err . PHP_EOL;
 
         }
     }
