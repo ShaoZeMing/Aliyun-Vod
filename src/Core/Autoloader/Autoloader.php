@@ -25,12 +25,12 @@ class Autoloader
      * @var array
      */
     private static $autoloadPathArray = array(
-        'aliyun-php-sdk-core',
-        'aliyun-php-sdk-core/Auth',
-        'aliyun-php-sdk-core/Http',
-        'aliyun-php-sdk-core/Profile',
-        'aliyun-php-sdk-core/Regions',
-        'aliyun-php-sdk-core/Exception',
+        'Core',
+        'Core/Auth',
+        'Core/Http',
+        'Core/Profile',
+        'Core/Regions',
+        'Core/Exception',
     );
 
     /**
@@ -60,7 +60,7 @@ class Autoloader
     {
         $directories = dirname(dirname(__DIR__));
         foreach (glob($directories . DIRECTORY_SEPARATOR . '*') as $directory) {
-            if (is_dir($directory) && basename($directory) !== 'aliyun-php-sdk-core') {
+            if (is_dir($directory) && basename($directory) !== 'Core') {
                 self::$autoloadPathArray[] = basename($directory);
             }
         }

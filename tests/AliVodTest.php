@@ -8,6 +8,7 @@
 
 namespace ShaoZeMing\AliVod\Test;
 use PHPUnit\Framework\TestCase;
+use ShaoZeMing\AliVod\VodService;
 
 
 class AliVodTest extends TestCase
@@ -17,23 +18,26 @@ class AliVodTest extends TestCase
     public function setUp()
     {
 
-        $file =  dirname(__DIR__) .'/config/translate.php';
-        $config = include($file);
-        $this->instance = new TranslateService($config);
+//        $file =  dirname(__DIR__) .'/config/translate.php';
+//        $config = include($file);
+            $this->instance = new VodService();
     }
 
 
-    public function testPushManager()
+    public function testVodManager()
     {
-        $this->assertInstanceOf(TranslateService::class, $this->instance);
+        $this->assertInstanceOf(VodService::class, $this->instance);
     }
 
 
     public function testPush()
     {
-        echo PHP_EOL."发送push 中....".PHP_EOL;
+        echo PHP_EOL."后去上传后的地址和token 中....".PHP_EOL;
         try {
-            $result =  $this->instance->translate('你知道我对你不仅仅是喜欢');
+//            $result =  $this->instance->createUploadVideo();
+
+            $result =  $this->instance->uploadMediaByURL();
+
             print_r($result);
             return $result;
         } catch (\Exception $e) {
