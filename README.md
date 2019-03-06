@@ -1,4 +1,4 @@
-# Translate for PHP
+# Aliyun Vod for PHP
 
 ---
 [![](https://travis-ci.org/ShaoZeMing/translate.svg?branch=master)](https://travis-ci.org/ShaoZeMing/translate) 
@@ -9,7 +9,7 @@
 ## Installing
 
 ```shell
-$ composer require shaozeming/translate -v
+$ composer require shaozeming/aliyun-vod -v
 ```
 
 ### configuration 
