@@ -9,11 +9,22 @@ class VodService
     public $client;
 
 
-    public function __construct($type='access',$conf=null){
+    /**
+     * VodService constructor.
+     * @param array $config 账号信息 ['AccessKeyID'=>'xxx', 'AccessKeySecret'=>'xxxxxxxxx']
+     * @param string $type 类型:access|sts
+     * @throws \Exception
+     */
+    public function __construct(array $config,$type='access'){
 
-        $config = $conf?: ['AccessKeyID'=>'xxxx','AccessKeySecret'=>'xxxxxx'];
+        if(!isset($config['AccessKeyID']) ||  !isset($config['AccessKeySecret'])){
+            throw new \Exception('config AccessKeyID or AccessKeySecret is empty!');
+        }
 
-        if($type=='sts' && $conf){
+        if($type=='sts'){
+            if(!isset($config['securityToken'])){
+                throw new \Exception('sts config securityToken is empty!');
+            }
             $this->client =$this->initVodSTSClient($config['AccessKeyID'],$config['AccessKeySecret'],$config['securityToken']);
         }else{
             $this->client =$this->initVodClient($config['AccessKeyID'],$config['AccessKeySecret']);
@@ -21,6 +32,13 @@ class VodService
 
     }
 
+    /**
+     * User: ZeMing Shao
+     * Email: szm19920426@gmail.com
+     * @param $accessKeyId
+     * @param $accessKeySecret
+     * @return \DefaultAcsClient
+     */
     public function initVodClient($accessKeyId, $accessKeySecret) {
 
         $regionId = 'cn-shanghai';  // 点播服务接入区域
@@ -29,6 +47,14 @@ class VodService
     }
 
 
+    /**
+     * User: ZeMing Shao
+     * Email: szm19920426@gmail.com
+     * @param $accessKeyId
+     * @param $accessKeySecret
+     * @param $securityToken
+     * @return \DefaultAcsClient
+     */
     public function initVodSTSClient($accessKeyId, $accessKeySecret, $securityToken) {
         $regionId = 'cn-shanghai';  // 点播服务接入区域
         $profile = \DefaultProfile::getProfile($regionId, $accessKeyId, $accessKeySecret, $securityToken);
@@ -40,17 +66,22 @@ class VodService
      * 获取视频上传凭证
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
+     * @param $title
+     * @param $filename
+     * @param $desc
+     * @param $coverUrl
+     * @param array $tags
      * @return mixed|\SimpleXMLElement
      * @throws \ClientException
      * @throws \ServerException
      */
-    public function createUploadVideo() {
+    public function createUploadVideo($title,$filename,$desc,$coverUrl,array $tags=[]) {
         $request = new CreateUploadVideoRequest();
-        $request->setTitle("Sample Title");
-        $request->setFileName("videoFile.mov");
-        $request->setDescription("Video Description");
-        $request->setCoverURL("http://img.alicdn.com/tps/TB1qnJ1PVXXXXXCXXXXXXXXXXXX-700-700.png");
-        $request->setTags("tag1,tag2");
+        $request->setTitle($title);
+        $request->setFileName($filename);
+        $request->setDescription($desc);
+        $request->setCoverURL($coverUrl);
+        $request->setTags(implode(',',$tags));
         $request->setAcceptFormat('JSON');
         $uploadInfo =   $this->client->getAcsResponse($request);
 
@@ -81,19 +112,20 @@ class VodService
      * URL批量拉取上传
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
-     * @param null $url
+     * @param string $url
+     * @param string $title
      * @return mixed|\SimpleXMLElement
      * @throws \ClientException
      * @throws \ServerException
      */
-    public  function uploadMediaByURL($url = null) {
+    public  function uploadMediaByURL($url,$title) {
+
         $request = new UploadMediaByURLRequest();
-        $url =$url?: "http://tb-video.bdstatic.com/tieba-movideo/575421_0ac5cf0333a599a1627fca08177400a1_2fee83eb31d9.mp4";
         $request->setUploadURLs($url);
         $uploadMetadataList = array();
         $uploadMetadata = array();
         $uploadMetadata["SourceUrl"] = $url;
-        $uploadMetadata["Title"] = "贴吧拉去的一个视频";
+        $uploadMetadata["Title"] = $title;
         $uploadMetadataList[] = $uploadMetadata;
         $request->setUploadMetadatas(json_encode($uploadMetadataList));
         return $this->client->getAcsResponse($request);
