@@ -1,0 +1,32 @@
+{
+    "name": "shaozeming/aliyun-vod",
+    "description": "基于阿里云点播系统最新版本的SDKcomposer package",
+    "require": {
+        "guzzlehttp/guzzle": "~6.3",
+        "stichoza/google-translate-php": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.3",
+        "mockery/mockery": "^0.9.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ShaoZeMing",
+            "email": "szm19920426@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ShaoZeMing\\AliVod\\": "./src/Vod/"
+        },
+        "files": [
+            "./src/Core/Config.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ShaoZeMing\\AliVod\\Tests\\": "./tests"
+        }
+    }
+}
