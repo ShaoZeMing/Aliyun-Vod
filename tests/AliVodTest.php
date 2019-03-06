@@ -9,7 +9,7 @@
 namespace ShaoZeMing\AliVod\Test;
 
 use PHPUnit\Framework\TestCase;
-use ShaoZeMing\AliVod\Services\VodService;
+use ShaoZeMing\AliVod\Services\UploadService;
 
 
 class AliVodTest extends TestCase
@@ -24,7 +24,7 @@ class AliVodTest extends TestCase
 
         try {
             $config = ['AccessKeyID' => 'xxxxx', 'AccessKeySecret' => 'xxxxx'];
-            $this->instance = new VodService($config);
+            $this->instance = new UploadService($config);
         } catch (\Exception $e) {
             $err = "Error : 错误：" . $e->getMessage();
             echo $err . PHP_EOL;
@@ -34,7 +34,7 @@ class AliVodTest extends TestCase
 
     public function testVodManager()
     {
-        $this->assertInstanceOf(VodService::class, $this->instance);
+        $this->assertInstanceOf(UploadService::class, $this->instance);
     }
 
 
