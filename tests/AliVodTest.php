@@ -23,7 +23,7 @@ class AliVodTest extends TestCase
 //        $config = include($file);
 
         try {
-            $config = ['AccessKeyID' => 'xxxxx', 'AccessKeySecret' => 'xxxxxx'];
+            $config = ['AccessKeyID' => 'xxxxx', 'AccessKeySecret' => 'xxxxx'];
             $this->instance = new VodService($config);
         } catch (\Exception $e) {
             $err = "Error : 错误：" . $e->getMessage();
