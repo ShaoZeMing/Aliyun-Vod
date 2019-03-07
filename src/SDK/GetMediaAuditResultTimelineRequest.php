@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of GetMediaAuditResultTimeline
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getMediaId()
  */
-class GetMediaAuditResultTimelineRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
+class GetMediaAuditResultTimelineRequest extends RpcAcsRequest
 {
 
     /**

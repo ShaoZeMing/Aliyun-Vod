@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of GetImageInfo
  *
@@ -11,7 +13,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getAuthTimeout()
  */
-class GetImageInfoRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
+class GetImageInfoRequest extends RpcAcsRequest
 {
 
     /**
