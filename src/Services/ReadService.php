@@ -49,9 +49,6 @@ class ReadService extends BaseService
         $request->setAuthInfoTimeout($timeout);
         $request->setAcceptFormat('JSON');
         $playAuth  = $this->client->getAcsResponse($request);
-
-        print($playAuth->PlayAuth."\n");
-        print_r($playAuth->VideoMeta);
         return $playAuth;
     }
 
