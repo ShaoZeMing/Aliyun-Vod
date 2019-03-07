@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of AddCategory
  *
@@ -11,7 +13,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getParentId()
  * @method string getCateName()
  */
-class AddCategoryRequest extends \RpcAcsRequest
+class AddCategoryRequest extends RpcAcsRequest
 {
 
     /**

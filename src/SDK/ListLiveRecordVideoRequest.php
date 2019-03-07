@@ -18,7 +18,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getStreamName()
  * @method string getQueryType()
  */
-class ListLiveRecordVideoRequest extends \RpcAcsRequest
+class ListLiveRecordVideoRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

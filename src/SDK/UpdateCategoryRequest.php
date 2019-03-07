@@ -11,7 +11,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getCateName()
  */
-class UpdateCategoryRequest extends \RpcAcsRequest
+class UpdateCategoryRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

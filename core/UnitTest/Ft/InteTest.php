@@ -1,8 +1,10 @@
 <?php
 require_once '../../Config.php';
 
-use UnitTest\Ft\TestRoaApiRequest;
-use UnitTest\Ft\TestRpcApiRequest;
+use ShaoZeMing\Aliyun\Core\UnitTest\Ft\TestRoaApiRequest;
+use ShaoZeMing\Aliyun\Core\UnitTest\Ft\TestRpcApiRequest;
+use ShaoZeMing\Aliyun\Core\Profile\DefaultProfile;
+use ShaoZeMing\Aliyun\Core\DefaultAcsClient;
 
 $clientProfile = DefaultProfile::getProfile(
     "cn-hangzhou",
@@ -15,7 +17,7 @@ DefaultProfile::addEndpoint("cn-hangzhou", "cn-hangzhou", "Ft", "ft.aliyuncs.com
 
 print_r("1.开始测试普通AK访问: ");
 echo "\n";
-$client = new DefaultAcsClient($clientProfile);
+$client = new \ShaoZeMing\Aliyun\Core\DefaultAcsClient($clientProfile);
 # 创建 API 请求并设置参数
 $request = new TestRpcApiRequest();
 $request->setQueryParam("test");

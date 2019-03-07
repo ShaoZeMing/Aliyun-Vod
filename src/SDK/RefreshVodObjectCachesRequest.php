@@ -10,7 +10,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getObjectType()
  */
-class RefreshVodObjectCachesRequest extends \RpcAcsRequest
+class RefreshVodObjectCachesRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

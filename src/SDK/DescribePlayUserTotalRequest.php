@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DescribePlayUserTotal
  *
@@ -9,7 +11,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class DescribePlayUserTotalRequest extends \RpcAcsRequest
+class DescribePlayUserTotalRequest extends RpcAcsRequest
 {
 
     /**

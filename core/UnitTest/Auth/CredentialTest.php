@@ -1,4 +1,6 @@
 <?php
+namespace  ShaoZeMing\Aliyun\Core\UnitTest\Auth;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -17,9 +19,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-include_once '../../Config.php';
+//include_once '../../Config.php';
 
-class CredentialTest extends PHPUnit_Framework_TestCase
+use ShaoZeMing\Aliyun\Core\Auth\Credential;
+
+class CredentialTest extends \PHPUnit_Framework_TestCase
 {
     public function testCredential()
     {

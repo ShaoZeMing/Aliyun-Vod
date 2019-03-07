@@ -18,7 +18,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getResultTypes()
  * @method string getFields()
  */
-class SearchMediaRequest extends \RpcAcsRequest
+class SearchMediaRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

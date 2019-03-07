@@ -14,7 +14,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getAuthTimeout()
  */
-class GetMezzanineInfoRequest extends \RpcAcsRequest
+class GetMezzanineInfoRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

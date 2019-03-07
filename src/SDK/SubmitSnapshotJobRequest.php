@@ -17,7 +17,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getSnapshotTemplateId()
  * @method string getHeight()
  */
-class SubmitSnapshotJobRequest extends \RpcAcsRequest
+class SubmitSnapshotJobRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

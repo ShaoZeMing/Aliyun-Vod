@@ -6,9 +6,11 @@
  * Time: 下午6:39
  */
 
-namespace UnitTest\Ft;
+namespace ShaoZeMing\Aliyun\Core\UnitTest\Ft;
 
-class TestRpcApiRequest extends \RpcAcsRequest
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
+class TestRpcApiRequest extends RpcAcsRequest
 {
     public function __construct()
     {

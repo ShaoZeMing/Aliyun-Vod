@@ -16,7 +16,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getPriority()
  * @method string getStorageLocation()
  */
-class UploadMediaByURLRequest extends \RpcAcsRequest
+class UploadMediaByURLRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

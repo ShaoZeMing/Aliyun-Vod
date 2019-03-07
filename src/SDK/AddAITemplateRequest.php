@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of AddAITemplate
  *
@@ -12,7 +14,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getTemplateName()
  * @method string getOwnerId()
  */
-class AddAITemplateRequest extends \RpcAcsRequest
+class AddAITemplateRequest extends RpcAcsRequest
 {
 
     /**

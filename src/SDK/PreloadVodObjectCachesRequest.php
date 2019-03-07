@@ -9,7 +9,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getObjectPath()
  * @method string getOwnerId()
  */
-class PreloadVodObjectCachesRequest extends \RpcAcsRequest
+class PreloadVodObjectCachesRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

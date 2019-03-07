@@ -13,7 +13,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getRegisterMetadatas()
  * @method string getWorkFlowId()
  */
-class RegisterMediaRequest extends \RpcAcsRequest
+class RegisterMediaRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

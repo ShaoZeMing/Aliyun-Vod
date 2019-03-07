@@ -17,9 +17,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-include_once '../../Config.php';
+namespace ShaoZeMing\Aliyun\Core\UnitTest\Regions;
 
-class EndpointProviderTest extends PHPUnit_Framework_TestCase
+//include_once '../../Config.php';
+
+use ShaoZeMing\Aliyun\Core\Regions\EndpointProvider;
+
+class EndpointProviderTest extends \PHPUnit_Framework_TestCase
 {
     public function testFindProductDomain()
     {

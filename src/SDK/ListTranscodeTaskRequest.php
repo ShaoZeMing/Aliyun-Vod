@@ -14,7 +14,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getStartTime()
  * @method string getOwnerId()
  */
-class ListTranscodeTaskRequest extends \RpcAcsRequest
+class ListTranscodeTaskRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

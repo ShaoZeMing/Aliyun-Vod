@@ -1,4 +1,6 @@
 <?php
+
+//namespace  ShaoZeMing\Aliyun\Core;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -17,10 +19,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-include_once 'Autoloader/Autoloader.php';
-include_once 'Regions/EndpointConfig.php';
-include_once 'Regions/LocationService.php';
-Autoloader::loadDirectories();
+//use ShaoZeMing\Aliyun\Core\Autoloader\Autoloader;
+//include_once 'Autoloader/Autoloader.php';
+//include_once 'Regions/EndpointConfig.php';
+//include_once 'Regions/LocationService.php';
+//Autoloader::loadDirectories();
 //config http proxy
 /**
  *

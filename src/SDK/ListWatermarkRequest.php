@@ -9,7 +9,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getResourceOwnerAccount()
  * @method string getOwnerId()
  */
-class ListWatermarkRequest extends \RpcAcsRequest
+class ListWatermarkRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

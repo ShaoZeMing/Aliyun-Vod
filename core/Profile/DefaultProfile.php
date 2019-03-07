@@ -17,6 +17,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+namespace  ShaoZeMing\Aliyun\Core\Profile;
+
+use ShaoZeMing\Aliyun\Core\Auth\BearerTokenCredential;
+use ShaoZeMing\Aliyun\Core\Auth\Credential;
+use ShaoZeMing\Aliyun\Core\Auth\EcsRamRoleCredential;
+use ShaoZeMing\Aliyun\Core\Auth\RamRoleArnCredential;
+use ShaoZeMing\Aliyun\Core\Auth\ShaHmac1Signer;
+use ShaoZeMing\Aliyun\Core\Regions\Endpoint;
+use ShaoZeMing\Aliyun\Core\Regions\EndpointProvider;
+use ShaoZeMing\Aliyun\Core\Regions\LocationService;
+use ShaoZeMing\Aliyun\Core\Regions\ProductDomain;
 
 /**
  *

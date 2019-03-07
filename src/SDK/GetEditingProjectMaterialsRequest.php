@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of GetEditingProjectMaterials
  *
@@ -12,7 +14,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getType()
  * @method string getProjectId()
  */
-class GetEditingProjectMaterialsRequest extends \RpcAcsRequest
+class GetEditingProjectMaterialsRequest extends RpcAcsRequest
 {
 
     /**

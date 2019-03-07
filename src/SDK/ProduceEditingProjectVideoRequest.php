@@ -17,7 +17,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getProduceConfig()
  * @method string getProjectId()
  */
-class ProduceEditingProjectVideoRequest extends \RpcAcsRequest
+class ProduceEditingProjectVideoRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

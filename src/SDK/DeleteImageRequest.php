@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DeleteImage
  *
@@ -14,7 +16,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getDeleteImageType()
  * @method string getImageIds()
  */
-class DeleteImageRequest extends \RpcAcsRequest
+class DeleteImageRequest extends RpcAcsRequest
 {
 
     /**

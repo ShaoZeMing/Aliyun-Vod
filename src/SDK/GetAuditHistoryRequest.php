@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of GetAuditHistory
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getVideoId()
  * @method string getSortBy()
  */
-class GetAuditHistoryRequest extends \RpcAcsRequest
+class GetAuditHistoryRequest extends RpcAcsRequest
 {
 
     /**

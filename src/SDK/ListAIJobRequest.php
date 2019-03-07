@@ -11,7 +11,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getJobIds()
  * @method string getOwnerId()
  */
-class ListAIJobRequest extends \RpcAcsRequest
+class ListAIJobRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

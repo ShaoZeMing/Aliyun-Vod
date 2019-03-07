@@ -11,10 +11,7 @@ class UploadService extends BaseService
 {
 
 
-
-
-    /**
-     * 获取视频上传凭证
+    /**获取视频上传凭证
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
      * @param $title
@@ -22,9 +19,9 @@ class UploadService extends BaseService
      * @param $desc
      * @param $coverUrl
      * @param array $tags
-     * @return mixed|\SimpleXMLElement
-     * @throws \ClientException
-     * @throws \ServerException
+     * @return mixed|\ShaoZeMing\Aliyun\Core\SimpleXMLElement
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
     public function createUploadVideo($title,$filename,$desc,$coverUrl,array $tags=[]) {
         $request = new CreateUploadVideoRequest();
@@ -46,9 +43,9 @@ class UploadService extends BaseService
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
      * @param $videoId
-     * @return mixed|\SimpleXMLElement
-     * @throws \ClientException
-     * @throws \ServerException
+     * @return mixed|\ShaoZeMing\Aliyun\Core\SimpleXMLElement
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
     public function refreshUploadVideo($videoId) {
         $request = new RefreshUploadVideoRequest();
@@ -64,11 +61,11 @@ class UploadService extends BaseService
      * URL批量拉取上传
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
-     * @param string $url
-     * @param string $title
-     * @return mixed|\SimpleXMLElement
-     * @throws \ClientException
-     * @throws \ServerException
+     * @param $url
+     * @param $title
+     * @return mixed|\ShaoZeMing\Aliyun\Core\SimpleXMLElement
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
     public  function uploadMediaByURL($url,$title) {
 

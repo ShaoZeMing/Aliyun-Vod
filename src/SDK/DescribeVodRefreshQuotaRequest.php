@@ -2,13 +2,15 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DescribeVodRefreshQuota
  *
  * @method string getSecurityToken()
  * @method string getOwnerId()
  */
-class DescribeVodRefreshQuotaRequest extends \RpcAcsRequest
+class DescribeVodRefreshQuotaRequest extends RpcAcsRequest
 {
 
     /**

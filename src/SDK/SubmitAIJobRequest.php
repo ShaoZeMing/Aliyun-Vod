@@ -14,7 +14,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getMediaId()
  * @method string getConfig()
  */
-class SubmitAIJobRequest extends \RpcAcsRequest
+class SubmitAIJobRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

@@ -17,6 +17,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+namespace  ShaoZeMing\Aliyun\Core\Auth;
+
+use ShaoZeMing\Aliyun\Core\Http\HttpHelper;
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
 
 /**
  *

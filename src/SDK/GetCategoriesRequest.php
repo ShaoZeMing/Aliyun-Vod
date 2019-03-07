@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of GetCategories
  *
@@ -13,7 +15,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getSortBy()
  * @method string getOwnerId()
  */
-class GetCategoriesRequest extends \RpcAcsRequest
+class GetCategoriesRequest extends RpcAcsRequest
 {
 
     /**

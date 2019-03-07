@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DeleteWatermark
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getResourceOwnerAccount()
  * @method string getOwnerId()
  */
-class DeleteWatermarkRequest extends \RpcAcsRequest
+class DeleteWatermarkRequest extends RpcAcsRequest
 {
 
     /**

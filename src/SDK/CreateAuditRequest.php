@@ -2,12 +2,14 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of CreateAudit
  *
  * @method string getAuditContent()
  */
-class CreateAuditRequest extends \RpcAcsRequest
+class CreateAuditRequest extends RpcAcsRequest
 {
 
     /**

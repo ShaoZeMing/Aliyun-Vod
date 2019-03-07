@@ -17,10 +17,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-include_once 'BaseTest.php';
+namespace ShaoZeMing\Aliyun\Core\UnitTest;
 
-use UnitTest\BatchCompute\Request as BC;
-use UnitTest\Ecs\Request as Ecs;
+
+use ShaoZeMing\Aliyun\Core\UnitTest\BatchCompute\ListImagesRequest;
+use ShaoZeMing\Aliyun\Core\UnitTest\Ecs\Request as Ecs;
 
 class DefaultAcsClientTest extends BaseTest
 {
@@ -36,7 +37,7 @@ class DefaultAcsClientTest extends BaseTest
 
     public function testDoActionROA()
     {
-        $request  = new BC\ListImagesRequest();
+        $request  = new ListImagesRequest();
         $response = $this->client->doAction($request);
         $this->assertNotNull($response);
     }

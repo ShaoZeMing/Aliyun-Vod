@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DescribePlayTopVideos
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getBizDate()
  * @method string getPageNo()
  */
-class DescribePlayTopVideosRequest extends \RpcAcsRequest
+class DescribePlayTopVideosRequest extends RpcAcsRequest
 {
 
     /**

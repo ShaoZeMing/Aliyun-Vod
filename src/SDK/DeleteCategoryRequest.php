@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DeleteCategory
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getCateId()
  * @method string getOwnerId()
  */
-class DeleteCategoryRequest extends \RpcAcsRequest
+class DeleteCategoryRequest extends RpcAcsRequest
 {
 
     /**

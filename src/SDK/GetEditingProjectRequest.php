@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of GetEditingProject
  *
@@ -11,7 +13,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getProjectId()
  */
-class GetEditingProjectRequest extends \RpcAcsRequest
+class GetEditingProjectRequest extends RpcAcsRequest
 {
 
     /**

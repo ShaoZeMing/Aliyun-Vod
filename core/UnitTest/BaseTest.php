@@ -19,7 +19,9 @@
  * under the License.
  */
 
-class BaseTest extends PHPUnit_Framework_TestCase
+namespace ShaoZeMing\Aliyun\Core\UnitTest;
+
+class BaseTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var null

@@ -10,7 +10,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getVideoIds()
  */
-class GetVideoInfosRequest extends \RpcAcsRequest
+class GetVideoInfosRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

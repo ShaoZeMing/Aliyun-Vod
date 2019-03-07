@@ -11,7 +11,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getMediaId()
  */
-class GetMediaAuditResultRequest extends \RpcAcsRequest
+class GetMediaAuditResultRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DeleteMezzanines
  *
@@ -11,7 +13,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getVideoIds()
  */
-class DeleteMezzaninesRequest extends \RpcAcsRequest
+class DeleteMezzaninesRequest extends RpcAcsRequest
 {
 
     /**

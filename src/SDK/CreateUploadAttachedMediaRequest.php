@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of CreateUploadAttachedMedia
  *
@@ -19,7 +21,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getFileName()
  * @method string getCateId()
  */
-class CreateUploadAttachedMediaRequest extends \RpcAcsRequest
+class CreateUploadAttachedMediaRequest extends RpcAcsRequest
 {
 
     /**

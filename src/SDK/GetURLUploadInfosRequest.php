@@ -11,7 +11,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getUploadURLs()
  * @method string getOwnerId()
  */
-class GetURLUploadInfosRequest extends \RpcAcsRequest
+class GetURLUploadInfosRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

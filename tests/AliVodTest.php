@@ -23,7 +23,7 @@ class AliVodTest extends TestCase
 
 
         try {
-            $config = ['AccessKeyID' => '******账号不给你看***', 'AccessKeySecret' => '*****密码给你看******'];
+            $config = ['AccessKeyID' => 'LTAIMwoi5eZ9NgEX', 'AccessKeySecret' => 'rExwU1bSS1XiOqzXaKyHC1GAZPdnpn'];
             $this->instance = new UploadService($config);
             $this->read = new ReadService($config);
         } catch (\Exception $e) {

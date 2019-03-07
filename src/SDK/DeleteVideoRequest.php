@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DeleteVideo
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getVideoIds()
  */
-class DeleteVideoRequest extends \RpcAcsRequest
+class DeleteVideoRequest extends RpcAcsRequest
 {
 
     /**

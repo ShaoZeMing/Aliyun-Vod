@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of CreateUploadVideo
  *
@@ -23,7 +25,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getWorkflowId()
  * @method string getCustomMediaInfo()
  */
-class CreateUploadVideoRequest extends \RpcAcsRequest
+class CreateUploadVideoRequest extends RpcAcsRequest
 {
 
     /**

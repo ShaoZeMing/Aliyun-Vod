@@ -17,9 +17,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-include_once '../../Config.php';
+namespace  ShaoZeMing\Aliyun\Core\UnitTest\Auth;
 
-class ShaHmac1SignerTest extends PHPUnit_Framework_TestCase
+use ShaoZeMing\Aliyun\Core\Auth\ShaHmac1Signer;
+
+
+class ShaHmac1SignerTest extends \PHPUnit_Framework_TestCase
 {
     public function testShaHmac1Signer()
     {

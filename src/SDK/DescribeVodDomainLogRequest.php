@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DescribeVodDomainLog
  *
@@ -12,7 +14,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getEndTime()
  * @method string getOwnerId()
  */
-class DescribeVodDomainLogRequest extends \RpcAcsRequest
+class DescribeVodDomainLogRequest extends RpcAcsRequest
 {
 
     /**

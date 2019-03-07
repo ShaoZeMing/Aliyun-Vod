@@ -18,8 +18,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+namespace  ShaoZeMing\Aliyun\Core\Exception;
 
-class ClientException extends Exception
+class ClientException extends \Exception
 {
     /**
      * @var string

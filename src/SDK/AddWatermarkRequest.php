@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of AddWatermark
  *
@@ -13,7 +15,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getType()
  * @method string getWatermarkConfig()
  */
-class AddWatermarkRequest extends \RpcAcsRequest
+class AddWatermarkRequest extends RpcAcsRequest
 {
 
     /**

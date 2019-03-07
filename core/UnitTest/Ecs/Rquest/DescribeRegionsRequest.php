@@ -18,9 +18,11 @@
  * under the License.
  */
 
-namespace UnitTest\Ecs\Request;
+namespace   ShaoZeMing\Aliyun\Core\UnitTest\Ecs\Request;
 
-class DescribeRegionsRequest extends \RpcAcsRequest
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
+class DescribeRegionsRequest extends RpcAcsRequest
 {
     public function __construct()
     {

@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of GetAIMediaAuditJob
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getResourceOwnerAccount()
  * @method string getOwnerId()
  */
-class GetAIMediaAuditJobRequest extends \RpcAcsRequest
+class GetAIMediaAuditJobRequest extends RpcAcsRequest
 {
 
     /**

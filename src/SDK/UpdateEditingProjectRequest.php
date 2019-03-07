@@ -15,7 +15,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getTitle()
  * @method string getProjectId()
  */
-class UpdateEditingProjectRequest extends \RpcAcsRequest
+class UpdateEditingProjectRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

@@ -19,9 +19,9 @@ class ReadService extends BaseService
      * Email: szm19920426@gmail.com
      * @param $videoId
      * @param float|int $timeout
-     * @return mixed|\SimpleXMLElement
-     * @throws \ClientException
-     * @throws \ServerException
+     * @return mixed|\ShaoZeMing\Aliyun\Core\SimpleXMLElement
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
     function getPlayInfo($videoId,$timeout=3600*24) {
         $request = new GetPlayInfoRequest();
@@ -38,10 +38,10 @@ class ReadService extends BaseService
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
      * @param $videoId
-     * @param float|int $timeout
-     * @return mixed|\SimpleXMLElement
-     * @throws \ClientException
-     * @throws \ServerException
+     * @param int $timeout
+     * @return mixed|\ShaoZeMing\Aliyun\Core\SimpleXMLElement
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
     function getPlayAuth($videoId,$timeout=3600) {
         $request = new GetVideoPlayAuthRequest();

@@ -17,7 +17,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getSortBy()
  * @method string getStatus()
  */
-class SearchEditingProjectRequest extends \RpcAcsRequest
+class SearchEditingProjectRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

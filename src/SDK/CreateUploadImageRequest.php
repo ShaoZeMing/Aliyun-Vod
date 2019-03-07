@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of CreateUploadImage
  *
@@ -18,7 +20,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOriginalFileName()
  * @method string getCateId()
  */
-class CreateUploadImageRequest extends \RpcAcsRequest
+class CreateUploadImageRequest extends RpcAcsRequest
 {
 
     /**

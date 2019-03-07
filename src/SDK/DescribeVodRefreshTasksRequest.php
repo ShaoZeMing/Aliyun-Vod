@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DescribeVodRefreshTasks
  *
@@ -18,7 +20,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getTaskId()
  * @method string getStatus()
  */
-class DescribeVodRefreshTasksRequest extends \RpcAcsRequest
+class DescribeVodRefreshTasksRequest extends RpcAcsRequest
 {
 
     /**

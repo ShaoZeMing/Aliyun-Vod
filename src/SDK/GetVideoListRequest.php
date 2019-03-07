@@ -17,7 +17,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getStatus()
  * @method string getStorageLocation()
  */
-class GetVideoListRequest extends \RpcAcsRequest
+class GetVideoListRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

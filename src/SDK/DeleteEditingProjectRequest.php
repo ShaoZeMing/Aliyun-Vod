@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DeleteEditingProject
  *
@@ -11,7 +13,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getProjectIds()
  * @method string getOwnerId()
  */
-class DeleteEditingProjectRequest extends \RpcAcsRequest
+class DeleteEditingProjectRequest extends RpcAcsRequest
 {
 
     /**

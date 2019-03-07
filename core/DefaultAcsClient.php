@@ -18,6 +18,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+namespace  ShaoZeMing\Aliyun\Core;
+
+
+use ShaoZeMing\Aliyun\Core\Auth\EcsRamRoleService;
+use ShaoZeMing\Aliyun\Core\Auth\RamRoleArnService;
+use ShaoZeMing\Aliyun\Core\Exception\ClientException;
+use ShaoZeMing\Aliyun\Core\Exception\ServerException;
+use ShaoZeMing\Aliyun\Core\Http\HttpHelper;
+use ShaoZeMing\Aliyun\Core\Regions\EndpointProvider;
+use ShaoZeMing\Aliyun\Core\Regions\LocationService;
 
 class DefaultAcsClient implements IAcsClient
 {

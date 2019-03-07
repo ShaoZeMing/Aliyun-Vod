@@ -22,7 +22,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getAuthTimeout()
  * @method string getAuthInfo()
  */
-class GetPlayInfoRequest extends \RpcAcsRequest
+class GetPlayInfoRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

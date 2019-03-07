@@ -18,6 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+namespace  ShaoZeMing\Aliyun\Core\Auth;
 
 class Credential extends AbstractCredential
 {
@@ -53,7 +54,7 @@ class Credential extends AbstractCredential
      * @param $accessSecret
      * @param $securityToken
      */
-    public function __construct($accessKeyId, $accessSecret, $securityToken)
+    public function __construct($accessKeyId, $accessSecret, $securityToken=null)
     {
         $this->accessKeyId   = $accessKeyId;
         $this->accessSecret  = $accessSecret;

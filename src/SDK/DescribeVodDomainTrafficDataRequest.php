@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DescribeVodDomainTrafficData
  *
@@ -13,7 +15,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getInterval()
  */
-class DescribeVodDomainTrafficDataRequest extends \RpcAcsRequest
+class DescribeVodDomainTrafficDataRequest extends RpcAcsRequest
 {
 
     /**

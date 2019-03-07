@@ -5,10 +5,13 @@
  * Date: 2017/7/17
  * Time: 下午4:57
  */
+namespace ShaoZeMing\Aliyun\Core\UnitTest\Regions;
 
-include_once '../../Config.php';
+//include_once '../../Config.php';
 
 use PHPUnit\Framework\TestCase;
+use ShaoZeMing\Aliyun\Core\Profile\DefaultProfile;
+use ShaoZeMing\Aliyun\Core\Regions\LocationService;
 
 class EndPointByLocationTest extends TestCase
 {

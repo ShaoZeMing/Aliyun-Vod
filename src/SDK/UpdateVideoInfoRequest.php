@@ -18,7 +18,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getCustomMediaInfo()
  * @method string getStatus()
  */
-class UpdateVideoInfoRequest extends \RpcAcsRequest
+class UpdateVideoInfoRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

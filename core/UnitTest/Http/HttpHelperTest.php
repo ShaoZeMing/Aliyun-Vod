@@ -17,7 +17,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-include_once '../BaseTest.php';
+namespace ShaoZeMing\Aliyun\Core\UnitTest\Http;
+
+use ShaoZeMing\Aliyun\Core\Http\HttpHelper;
+use ShaoZeMing\Aliyun\Core\UnitTest\BaseTest;
+
+//include_once '../BaseTest.php';
 
 class HttpHelperTest extends BaseTest
 {

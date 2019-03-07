@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DeleteTranscodeTemplateGroup
  *
@@ -12,7 +14,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getTranscodeTemplateGroupId()
  * @method string getForceDelGroup()
  */
-class DeleteTranscodeTemplateGroupRequest extends \RpcAcsRequest
+class DeleteTranscodeTemplateGroupRequest extends RpcAcsRequest
 {
 
     /**

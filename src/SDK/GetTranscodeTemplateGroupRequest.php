@@ -10,7 +10,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getTranscodeTemplateGroupId()
  */
-class GetTranscodeTemplateGroupRequest extends \RpcAcsRequest
+class GetTranscodeTemplateGroupRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

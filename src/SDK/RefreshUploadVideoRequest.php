@@ -10,7 +10,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getVideoId()
  * @method string getOwnerId()
  */
-class RefreshUploadVideoRequest extends \RpcAcsRequest
+class RefreshUploadVideoRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

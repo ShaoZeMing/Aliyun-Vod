@@ -15,7 +15,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getEncryptConfig()
  * @method string getPipelineId()
  */
-class SubmitTranscodeJobsRequest extends \RpcAcsRequest
+class SubmitTranscodeJobsRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

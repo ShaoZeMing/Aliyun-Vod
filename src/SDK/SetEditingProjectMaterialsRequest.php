@@ -12,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getProjectId()
  */
-class SetEditingProjectMaterialsRequest extends \RpcAcsRequest
+class SetEditingProjectMaterialsRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

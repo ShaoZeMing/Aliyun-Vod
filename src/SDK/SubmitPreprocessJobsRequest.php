@@ -11,7 +11,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getOwnerId()
  * @method string getPreprocessType()
  */
-class SubmitPreprocessJobsRequest extends \RpcAcsRequest
+class SubmitPreprocessJobsRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

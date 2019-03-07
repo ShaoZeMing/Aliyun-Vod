@@ -17,10 +17,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+namespace  ShaoZeMing\Aliyun\Core\UnitTest\BatchCompute;
 
-namespace UnitTest\BatchCompute\Request;
+use ShaoZeMing\Aliyun\Core\RoaAcsRequest;
 
-class ListImagesRequest extends \RoaAcsRequest
+class ListImagesRequest extends RoaAcsRequest
 {
     public function __construct()
     {

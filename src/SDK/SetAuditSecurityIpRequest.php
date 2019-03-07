@@ -9,7 +9,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getSecurityGroupName()
  * @method string getIps()
  */
-class SetAuditSecurityIpRequest extends \RpcAcsRequest
+class SetAuditSecurityIpRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

@@ -12,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getVodTemplateId()
  * @method string getOwnerId()
  */
-class UpdateVodTemplateRequest extends \RpcAcsRequest
+class UpdateVodTemplateRequest extends \ShaoZeMing\Aliyun\Core\RpcAcsRequest
 {
 
     /**

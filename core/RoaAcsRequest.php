@@ -18,6 +18,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+namespace  ShaoZeMing\Aliyun\Core;
+
+use ShaoZeMing\Aliyun\Core\Auth\BearerTokenCredential;
 
 abstract class RoaAcsRequest extends AcsRequest
 {

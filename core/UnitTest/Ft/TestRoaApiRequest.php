@@ -6,9 +6,11 @@
  * Time: 下午6:39
  */
 
-namespace UnitTest\Ft;
+namespace ShaoZeMing\Aliyun\Core\UnitTest\Ft;
 
-class TestRoaApiRequest extends \RoaAcsRequest
+use ShaoZeMing\Aliyun\Core\RoaAcsRequest;
+
+class TestRoaApiRequest extends RoaAcsRequest
 {
     public function __construct()
     {

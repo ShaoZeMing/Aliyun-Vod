@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DescribePlayVideoStatis
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getVideoId()
  * @method string getOwnerId()
  */
-class DescribePlayVideoStatisRequest extends \RpcAcsRequest
+class DescribePlayVideoStatisRequest extends RpcAcsRequest
 {
 
     /**

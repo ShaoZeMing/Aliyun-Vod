@@ -2,6 +2,8 @@
 
 namespace ShaoZeMing\AliVod\SDK;
 
+use ShaoZeMing\Aliyun\Core\RpcAcsRequest;
+
 /**
  * Request of DeleteVodTemplate
  *
@@ -10,7 +12,7 @@ namespace ShaoZeMing\AliVod\SDK;
  * @method string getVodTemplateId()
  * @method string getOwnerId()
  */
-class DeleteVodTemplateRequest extends \RpcAcsRequest
+class DeleteVodTemplateRequest extends RpcAcsRequest
 {
 
     /**
