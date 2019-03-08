@@ -3,11 +3,8 @@
 namespace ShaoZeMing\AliVod\Services;
 
 
-use ShaoZeMing\AliVod\SDK\CreateUploadVideoRequest;
 use ShaoZeMing\AliVod\SDK\GetPlayInfoRequest;
 use ShaoZeMing\AliVod\SDK\GetVideoPlayAuthRequest;
-use ShaoZeMing\AliVod\SDK\RefreshUploadVideoRequest;
-use ShaoZeMing\AliVod\SDK\UploadMediaByURLRequest;
 
 class ReadService extends BaseService
 {
@@ -23,7 +20,8 @@ class ReadService extends BaseService
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
-    function getPlayInfo($videoId,$timeout=3600*24) {
+    function getPlayInfo($videoId, $timeout = 3600 * 24)
+    {
         $request = new GetPlayInfoRequest();
         $request->setVideoId($videoId);
         $request->setAuthTimeout($timeout);
@@ -43,12 +41,13 @@ class ReadService extends BaseService
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
-    function getPlayAuth($videoId,$timeout=3600) {
+    function getPlayAuth($videoId, $timeout = 3600)
+    {
         $request = new GetVideoPlayAuthRequest();
         $request->setVideoId($videoId);
         $request->setAuthInfoTimeout($timeout);
         $request->setAcceptFormat('JSON');
-        $playAuth  = $this->client->getAcsResponse($request);
+        $playAuth = $this->client->getAcsResponse($request);
         return $playAuth;
     }
 

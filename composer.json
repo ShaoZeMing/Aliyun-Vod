@@ -1,6 +1,6 @@
 {
     "name": "shaozeming/aliyun-vod",
-    "description": "基于阿里云点播系统最新版本的SDKcomposer package",
+    "description": "基于阿里云点播系统最新版本的SDKcomposer package ",
     "require-dev": {
         "phpunit/phpunit": "^6.3",
         "mockery/mockery": "^0.9.9"

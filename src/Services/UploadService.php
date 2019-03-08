@@ -23,16 +23,17 @@ class UploadService extends BaseService
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
-    public function createUploadVideo($title,$filename,$desc,$coverUrl,array $tags=[]) {
+    public function createUploadVideo($title, $filename, $desc, $coverUrl, array $tags = [])
+    {
         $request = new CreateUploadVideoRequest();
         $request->setTitle($title);
         $request->setFileName($filename);
         $request->setDescription($desc);
         $request->setCoverURL($coverUrl);
-        $tags = implode(',',$tags);
+        $tags = implode(',', $tags);
         $request->setTags($tags);
         $request->setAcceptFormat('JSON');
-        $uploadInfo =   $this->client->getAcsResponse($request);
+        $uploadInfo = $this->client->getAcsResponse($request);
 
         return $uploadInfo;
     }
@@ -47,11 +48,12 @@ class UploadService extends BaseService
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
-    public function refreshUploadVideo($videoId) {
+    public function refreshUploadVideo($videoId)
+    {
         $request = new RefreshUploadVideoRequest();
         $request->setVideoId($videoId);
         $request->setAcceptFormat('JSON');
-        $refreshInfo =  $this->client->getAcsResponse($request);
+        $refreshInfo = $this->client->getAcsResponse($request);
 
         return $refreshInfo;
     }
@@ -67,7 +69,8 @@ class UploadService extends BaseService
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
-    public  function uploadMediaByURL($url,$title) {
+    public function uploadMediaByURL($url, $title)
+    {
 
         $request = new UploadMediaByURLRequest();
         $request->setUploadURLs($url);

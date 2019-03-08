@@ -22,19 +22,20 @@ class BaseService
      * @param string $type 类型:access|sts
      * @throws \Exception
      */
-    public function __construct(array $config,$type='access'){
+    public function __construct(array $config, $type = 'access')
+    {
 
-        if(!isset($config['AccessKeyID']) ||  !isset($config['AccessKeySecret'])){
+        if (!isset($config['AccessKeyID']) || !isset($config['AccessKeySecret'])) {
             throw new \Exception('config AccessKeyID or AccessKeySecret is empty!');
         }
 
-        if($type=='sts'){
-            if(!isset($config['securityToken'])){
+        if ($type == 'sts') {
+            if (!isset($config['securityToken'])) {
                 throw new \Exception('sts config securityToken is empty!');
             }
-            $this->client =$this->initVodSTSClient($config['AccessKeyID'],$config['AccessKeySecret'],$config['securityToken']);
-        }else{
-            $this->client =$this->initVodClient($config['AccessKeyID'],$config['AccessKeySecret']);
+            $this->client = $this->initVodSTSClient($config['AccessKeyID'], $config['AccessKeySecret'], $config['securityToken']);
+        } else {
+            $this->client = $this->initVodClient($config['AccessKeyID'], $config['AccessKeySecret']);
         }
 
     }
@@ -46,7 +47,8 @@ class BaseService
      * @param $accessKeySecret
      * @return DefaultAcsClient
      */
-    public function initVodClient($accessKeyId, $accessKeySecret) {
+    public function initVodClient($accessKeyId, $accessKeySecret)
+    {
 
         $regionId = 'cn-shanghai';  // 点播服务接入区域
         $profile = DefaultProfile::getProfile($regionId, $accessKeyId, $accessKeySecret);
@@ -62,12 +64,12 @@ class BaseService
      * @param $securityToken
      * @return DefaultAcsClient
      */
-    public function initVodSTSClient($accessKeyId, $accessKeySecret, $securityToken) {
+    public function initVodSTSClient($accessKeyId, $accessKeySecret, $securityToken)
+    {
         $regionId = 'cn-shanghai';  // 点播服务接入区域
         $profile = DefaultProfile::getProfile($regionId, $accessKeyId, $accessKeySecret, $securityToken);
         return new DefaultAcsClient($profile);
     }
-
 
 
 }
