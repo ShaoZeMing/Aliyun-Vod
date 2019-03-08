@@ -45,9 +45,36 @@ use ShaoZeMing\AliVod\Services\UploadService;
        
 
 
-
 ```
 
+## 使用原生官方sdk接口示例
+
+```php
+
+use ShaoZeMing\AliVod\SDK\GetPlayInfoRequest;
+
+    /**
+     * 获取视频播放详细信息
+     * User: ZeMing Shao
+     * Email: szm19920426@gmail.com
+     * @param $videoId
+     * @param float|int $timeout
+     * @return mixed|\ShaoZeMing\Aliyun\Core\SimpleXMLElement
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
+     * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
+     */
+    function getPlayInfo($videoId, $timeout = 3600 * 24)
+    {
+        $request = new GetPlayInfoRequest();
+        $request->setVideoId($videoId);
+        $request->setAuthTimeout($timeout);
+        $request->setAcceptFormat('JSON');
+        $playInfo = $this->client->getAcsResponse($request);
+        return $playInfo;
+    }
+
+
+```
 
 ## License
 
