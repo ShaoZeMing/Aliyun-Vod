@@ -7,6 +7,16 @@
 
 > 因为项目驱动，目前只自定义了几个简单的方法，用于视频查询鉴权和视频上传系列接口，比较其他很多功能接口，我个人觉得直接去控制台更好管理。如果你执意要用，那我只能说你很棒棒哦，需要vod其他的api方法调用，可以参考官方SDK文档使用本包进行调用，本包包含官方所有接口文件，composer已自动载入官方SDK,可以参考。Service/下几个文件。
 
+
+## 同胞兄弟
+
+- [ShaoZeMing/aliyun-vod](https://github.com/ShaoZeMing/Aliyun-Vod)
+- [ShaoZeMing/aliyun-sts](https://github.com/ShaoZeMing/Aliyun-Sts)
+- [ShaoZeMing/aliyun-core](https://github.com/ShaoZeMing/Aliyun-Core)
+- [ShaoZeMing/aliyun-oss](https://github.com/ShaoZeMing/Aliyun-Oss)
+- 待续...
+
+
 ## Installing
 
 ```shell
