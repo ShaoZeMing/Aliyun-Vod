@@ -23,9 +23,8 @@ class AliVodTest extends TestCase
 
 
         try {
-            $config = ['AccessKeyID' => '密码不能告诉你', 'AccessKeySecret' => '密码不能告诉你'];
-            $this->instance = new UploadService($config);
-            $this->read = new ReadService($config);
+            $this->instance = new UploadService();
+            $this->read = new ReadService();
         } catch (\Exception $e) {
             $err = "Error : 错误：" . $e->getMessage();
             echo $err . PHP_EOL;

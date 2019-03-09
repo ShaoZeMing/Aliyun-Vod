@@ -12,27 +12,53 @@ class BaseService
 
     public $client;
 
+    /**
+     * @var
+     */
+    public $config;
+    /**
+     * @var
+     */
+    public $accessKeyID;
+    /**
+     * @var
+     */
+    public $accessKeySecret;
 
     /**
-     * VodService constructor.
-     * @param array $config 账号信息 ['AccessKeyID'=>'xxx', 'AccessKeySecret'=>'xxxxxxxxx']
-     * @param string $type 类型:access|sts
-     * @throws \Exception
+     * @var
      */
-    public function __construct(array $config, $type = 'access')
+    public $regionId;
+
+    /**
+     * @var
+     */
+    public $timeout;
+
+    /**
+     * @var
+     */
+    public $type;
+
+    /**
+     * @var
+     */
+    public $acceptFormat;
+
+
+    /**
+     * BaseService constructor.
+     * @param null $config
+     * @param string $securityToken 如果是设置了sts模式，传入这个参数
+     */
+    public function __construct($config=null,$securityToken='')
     {
 
-        if (!isset($config['AccessKeyID']) || !isset($config['AccessKeySecret'])) {
-            throw new \Exception('config AccessKeyID or AccessKeySecret is empty!');
-        }
-
-        if ($type == 'sts') {
-            if (!isset($config['securityToken'])) {
-                throw new \Exception('sts config securityToken is empty!');
-            }
-            $this->client = $this->initVodSTSClient($config['AccessKeyID'], $config['AccessKeySecret'], $config['securityToken']);
+        $this->setConfig($config);
+        if ($this->type == 'sts') {
+            $this->client = $this->initVodSTSClient($securityToken);
         } else {
-            $this->client = $this->initVodClient($config['AccessKeyID'], $config['AccessKeySecret']);
+            $this->client = $this->initVodClient();
         }
 
     }
@@ -40,15 +66,12 @@ class BaseService
     /**
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
-     * @param $accessKeyId
-     * @param $accessKeySecret
      * @return DefaultAcsClient
      */
-    public function initVodClient($accessKeyId, $accessKeySecret)
+    public function initVodClient()
     {
 
-        $regionId = 'cn-shanghai';  // 点播服务接入区域
-        $profile = DefaultProfile::getProfile($regionId, $accessKeyId, $accessKeySecret);
+        $profile = DefaultProfile::getProfile($this->regionId, $this->accessKeyID, $this->accessKeySecret);
         return new DefaultAcsClient($profile);
     }
 
@@ -56,17 +79,33 @@ class BaseService
     /**
      * User: ZeMing Shao
      * Email: szm19920426@gmail.com
-     * @param $accessKeyId
-     * @param $accessKeySecret
      * @param $securityToken
      * @return DefaultAcsClient
      */
-    public function initVodSTSClient($accessKeyId, $accessKeySecret, $securityToken)
+    public function initVodSTSClient($securityToken)
     {
-        $regionId = 'cn-shanghai';  // 点播服务接入区域
-        $profile = DefaultProfile::getProfile($regionId, $accessKeyId, $accessKeySecret, $securityToken);
+        $profile = DefaultProfile::getProfile($this->regionId, $this->accessKeyID, $this->accessKeySecret, $securityToken);
         return new DefaultAcsClient($profile);
     }
 
+
+    /**
+     * User: ZeMing Shao
+     * Email: szm19920426@gmail.com
+     * @param $config
+     */
+    public function setConfig($config)
+    {
+        $this->config = $config ?: include dirname(__DIR__) .  DIRECTORY_SEPARATOR.'config.php';
+
+        $this->accessKeyID = $this->config['vod']['AccessKeyID'];
+        $this->accessKeySecret = $this->config['vod']['AccessKeySecret'];
+        $this->regionId = $this->config['vod']['regionId'];
+        $this->timeout = $this->config['vod']['timeout'];
+        $this->type = $this->config['vod']['type'];
+        $this->acceptFormat = $this->config['vod']['acceptFormat'];
+
+
+    }
 
 }

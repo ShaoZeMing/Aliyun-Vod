@@ -15,7 +15,7 @@ $ composer require shaozeming/aliyun-vod -v
 
 ## Example
 
-
+- 拷贝项目下`src/config.php`到你项目中，进行配置。
 ```php
 use ShaoZeMing\AliVod\Services\ReadService;
 use ShaoZeMing\AliVod\Services\UploadService;
@@ -23,20 +23,22 @@ use ShaoZeMing\AliVod\Services\UploadService;
 
  
  
- $config = ['AccessKeyID' => '*****秘钥不给你看******', 'AccessKeySecret' => '*****秘钥不给你看******'];
+             $config = include 'you_path/config.php';
+
              $instance = new UploadService($config);
-             $read = new ReadService($config);
 
 
-            $title ='title';
-            $filename= 'filename.mp4';
-            $desc = "这是一个测试视频";
-            $coverUrl='http://www.pptbz.com/pptpic/UploadFiles_6909/201203/2012031220134655.jpg';
-            $tags=['标签1','标签2'];
+//            $title ='title';
+//            $filename= 'filename.mp4';
+//            $desc = "这是一个测试视频";
+//            $coverUrl='http://www.pptbz.com/pptpic/UploadFiles_6909/201203/2012031220134655.jpg';
+//            $tags=['标签1','标签2'];
 //            $result =  $instance->createUploadVideo($title,$filename,$desc,$coverUrl, $tags);  //获取视频上传地址和凭证
 //            $result =  $instance->refreshUploadVideo($videoId);  //刷新视频上传凭证
 //            $result = $instance->uploadMediaByURL($url,$title);  //url 拉去视屏上传
             
+            
+              $read = new ReadService($config);
               $result =  $read->getPlayAuth('4db8b50cbee04154b9557a4812a27584'); // 获取播放权限参数
 //            $result =  $read->getPlayInfo('4db8b50cbee04154b9557a4812a27584'); // 获取播放信息
             
@@ -48,6 +50,7 @@ use ShaoZeMing\AliVod\Services\UploadService;
 ```
 
 ## 使用原生官方sdk接口示例
+- 目前只重写了几个接口方便使用，官方这个很多接口没有写，你们要使用可以直接使用原生方法。
 
 ```php
 

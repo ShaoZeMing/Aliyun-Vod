@@ -20,12 +20,13 @@ class ReadService extends BaseService
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
-    function getPlayInfo($videoId, $timeout = 3600 * 24)
+    function getPlayInfo($videoId, $timeout = null)
     {
+        $this->timeout = $timeout?:$this->timeout;
         $request = new GetPlayInfoRequest();
         $request->setVideoId($videoId);
-        $request->setAuthTimeout($timeout);
-        $request->setAcceptFormat('JSON');
+        $request->setAuthTimeout($this->timeout);
+        $request->setAcceptFormat($this->acceptFormat);
         $playInfo = $this->client->getAcsResponse($request);
         return $playInfo;
     }
@@ -41,12 +42,13 @@ class ReadService extends BaseService
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ClientException
      * @throws \ShaoZeMing\Aliyun\Core\Exception\ServerException
      */
-    function getPlayAuth($videoId, $timeout = 3600)
+    function getPlayAuth($videoId, $timeout = null)
     {
+        $this->timeout = $timeout?:$this->timeout;
         $request = new GetVideoPlayAuthRequest();
         $request->setVideoId($videoId);
-        $request->setAuthInfoTimeout($timeout);
-        $request->setAcceptFormat('JSON');
+        $request->setAuthInfoTimeout($this->timeout);
+        $request->setAcceptFormat($this->acceptFormat);
         $playAuth = $this->client->getAcsResponse($request);
         return $playAuth;
     }

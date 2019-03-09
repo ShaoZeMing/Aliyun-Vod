@@ -32,7 +32,7 @@ class UploadService extends BaseService
         $request->setCoverURL($coverUrl);
         $tags = implode(',', $tags);
         $request->setTags($tags);
-        $request->setAcceptFormat('JSON');
+        $request->setAcceptFormat($this->acceptFormat);
         $uploadInfo = $this->client->getAcsResponse($request);
 
         return $uploadInfo;
@@ -52,7 +52,7 @@ class UploadService extends BaseService
     {
         $request = new RefreshUploadVideoRequest();
         $request->setVideoId($videoId);
-        $request->setAcceptFormat('JSON');
+        $request->setAcceptFormat($this->acceptFormat);
         $refreshInfo = $this->client->getAcsResponse($request);
 
         return $refreshInfo;
