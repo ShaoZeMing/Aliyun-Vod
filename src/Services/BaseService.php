@@ -3,9 +3,6 @@
 namespace ShaoZeMing\AliVod\Services;
 
 
-use ShaoZeMing\AliVod\SDK\CreateUploadVideoRequest;
-use ShaoZeMing\AliVod\SDK\RefreshUploadVideoRequest;
-use ShaoZeMing\AliVod\SDK\UploadMediaByURLRequest;
 use ShaoZeMing\Aliyun\Core\DefaultAcsClient;
 use ShaoZeMing\Aliyun\Core\Profile\DefaultProfile;
 
