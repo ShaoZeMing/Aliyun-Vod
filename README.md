@@ -23,6 +23,31 @@
 $ composer require shaozeming/aliyun-vod -v
 ```
 
+
+### configuration 
+
+拷贝项目下`src/config.php`到你项目中，进行配置其中sts。
+
+配置示例代码：
+
+```php
+
+return [
+
+    /*点播配置*/
+    'vod' => [
+        'AccessKeyID' => '******密码不能给你看******',
+        'AccessKeySecret' => '******密码不能给你看******',
+        'regionId' => 'cn-shanghai',   // 点播服务接入区域
+        'timeout' => '3600',  // 如果是获取签名有效时间为多少
+        'type' => 'access',  //类型:access|sts 如果是sts 实例化对象时候需要传入$securityToken
+        'acceptFormat' => 'JSON',  //返回数据格式
+    ],
+];
+
+```
+
+
 ## Example
 
 - 拷贝项目下`src/config.php`到你项目中，进行配置。
